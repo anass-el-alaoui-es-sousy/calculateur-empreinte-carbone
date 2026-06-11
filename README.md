@@ -13,8 +13,6 @@ https://anass-el-alaoui-es-sousy.github.io/calculateur-empreinte-carbone/index.h
 
 Le site propose une interface visuelle avec un mini-dashboard, un formulaire de calcul, une page de résultats et une page méthodologique.
 
-Si une miniature est disponible dans le dépôt :
-
 ![Aperçu du projet](assets/miniature-eaes-carbon.png)
 
 ## Fonctionnalités
