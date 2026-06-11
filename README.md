@@ -4,6 +4,11 @@ Projet web individuel réalisé dans le cadre de ma Licence MIASHS.
 
 L’objectif de cette application est d’estimer l’empreinte carbone hebdomadaire d’un étudiant à partir de plusieurs catégories : transport, repas et usages numériques.
 
+## Démo en ligne
+
+Le projet est accessible ici :  
+https://anass-el-alaoui-es-sousy.github.io/calculateur-empreinte-carbone/index.html
+
 ## Fonctionnalités
 
 * Formulaire de saisie des habitudes hebdomadaires
