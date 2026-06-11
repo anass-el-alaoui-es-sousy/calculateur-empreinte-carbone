@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats carbone - Défi 4</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header site-header-compact">
+        <div class="logo-block">
+            <p class="eyebrow">Défi 4.3</p>
+            <h1>Résultats de la semaine</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a class="nav-link" href="../index.html">Accueil</a>
+            <a class="nav-link" href="calculateur.html">Calculateur</a>
+            <a class="nav-link nav-link-active" href="resultats.html">Résultats</a>
+            <a class="nav-link" href="methodologie.html">Méthodologie</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section id="empty-state" class="panel content-panel empty-state hidden-state">
+            <h2>Aucun calcul enregistré</h2>
+            <p>
+                Pour afficher les résultats, commence par remplir le formulaire de la page
+                calculateur.
+            </p>
+            <a class="button button-primary" href="calculateur.html">Aller au calculateur</a>
+        </section>
+
+        <section id="results-content" class="results-layout hidden-state">
+            <div class="panel summary-panel">
+                <p class="eyebrow">Empreinte carbone hebdomadaire</p>
+                <div class="result-highlight">
+                    <p>Total de la semaine</p>
+                    <strong id="total-value">0,00 kg CO2e</strong>
+                </div>
+
+                <div class="result-cards">
+                    <article class="mini-result">
+                        <h3>Transport</h3>
+                        <p id="transport-value">0,00 kg CO2e</p>
+                    </article>
+                    <article class="mini-result">
+                        <h3>Repas</h3>
+                        <p id="meals-value">0,00 kg CO2e</p>
+                    </article>
+                    <article class="mini-result">
+                        <h3>Numérique</h3>
+                        <p id="digital-value">0,00 kg CO2e</p>
+                    </article>
+                </div>
+
+                <div class="advice-box">
+                    <h3>Lecture du résultat</h3>
+                    <p id="main-advice">
+                        Le conseil principal apparaît ici après calcul.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel chart-panel">
+                <h2>Répartition par catégorie</h2>
+                <div class="chart-wrap chart-wrap-large">
+                    <div id="result-chart" class="bar-chart" aria-label="Graphique de répartition carbone"></div>
+                </div>
+            </div>
+
+            <div class="panel recap-panel">
+                <h2>Récapitulatif des données saisies</h2>
+                <div class="recap-grid">
+                    <article class="recap-card">
+                        <h3>Transport</h3>
+                        <ul class="plain-list" id="transport-recap"></ul>
+                    </article>
+                    <article class="recap-card">
+                        <h3>Repas</h3>
+                        <ul class="plain-list" id="meals-recap"></ul>
+                    </article>
+                    <article class="recap-card">
+                        <h3>Numérique</h3>
+                        <ul class="plain-list" id="digital-recap"></ul>
+                    </article>
+                </div>
+            </div>
+
+            <div class="panel content-panel">
+                <h2>Interprétation</h2>
+                <p>
+                    Cette estimation reste pédagogique. Elle sert surtout à repérer le poste le plus
+                    important de la semaine et à comparer différentes habitudes étudiantes.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-secondary" href="calculateur.html">Modifier mes données</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Résultats issus des données saisies sur la page calculateur</p>
+    </footer>
+</body>
+</html>

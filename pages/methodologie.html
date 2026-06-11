@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodologie - Défi 4</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header class="site-header site-header-compact">
+        <div class="logo-block">
+            <p class="eyebrow">Défi 4.3</p>
+            <h1>Méthodologie et sources</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a class="nav-link" href="../index.html">Accueil</a>
+            <a class="nav-link" href="calculateur.html">Calculateur</a>
+            <a class="nav-link" href="resultats.html">Résultats</a>
+            <a class="nav-link nav-link-active" href="methodologie.html">Méthodologie</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="panel content-panel">
+            <h2>Données retenues</h2>
+            <p>
+                L'application retient trois familles de données : le transport domicile - université,
+                les repas pris sur une semaine et les usages numériques liés aux études.
+            </p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Données demandées</th>
+                            <th>Source principale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Transport</td>
+                            <td>mode de transport, distance, jours de présence, aller-retour</td>
+                            <td>Impact CO2</td>
+                        </tr>
+                        <tr>
+                            <td>Repas</td>
+                            <td>nombre de repas végétaliens, végétariens, poulet, poisson, boeuf</td>
+                            <td>Impact CO2 / AGRIBALYSE</td>
+                        </tr>
+                        <tr>
+                            <td>Numérique</td>
+                            <td>heures de streaming, heures de visioconférence, emails envoyés</td>
+                            <td>Impact CO2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel content-panel">
+            <h2>Choix de conception</h2>
+            <p>
+                L'application est réalisée individuellement en HTML, CSS et JavaScript, afin de
+                rester cohérente avec les apprentissages du cours et avec les défis précédents.
+            </p>
+        </section>
+
+        <section class="panel content-panel">
+            <h2>Facteurs utilises dans l'application</h2>
+            <div class="factor-grid">
+                <article class="factor-card">
+                    <h3>Transport</h3>
+                    <ul class="plain-list">
+                        <li>Métro : 4,44 g CO2e / km</li>
+                        <li>Bus thermique : 122 g CO2e / km</li>
+                        <li>TGV : 2,93 g CO2e / km</li>
+                        <li>Voiture électrique : 103 g CO2e / km</li>
+                        <li>Voiture thermique : 218 g CO2e / km</li>
+                        <li>Covoiturage : 109 g CO2e / km</li>
+                    </ul>
+                </article>
+                <article class="factor-card">
+                    <h3>Repas</h3>
+                    <ul class="plain-list">
+                        <li>Repas végétal / végétalien : 0,39 kg CO2e</li>
+                        <li>Repas végétarien : 0,51 kg CO2e</li>
+                        <li>Repas avec poulet : 1,58 kg CO2e</li>
+                        <li>Repas avec poisson : 1,98 kg CO2e</li>
+                        <li>Repas avec boeuf : 7,26 kg CO2e</li>
+                    </ul>
+                </article>
+                <article class="factor-card">
+                    <h3>Numérique</h3>
+                    <ul class="plain-list">
+                        <li>Streaming : 31,6 g CO2e / heure</li>
+                        <li>Visioconférence : 16 g CO2e / heure</li>
+                        <li>Email : 0,104 g CO2e / email</li>
+                    </ul>
+                </article>
+            </div>
+            <p class="muted-note">
+                Les facteurs numériques ont été simplifiés à partir des équivalences publiques
+                affichées sur l'outil Usage numérique d'Impact CO2 afin de disposer d'un calcul
+                hebdomadaire clair et directement exploitable dans une application web.
+            </p>
+        </section>
+
+        <section class="panel content-panel">
+            <h2>Formules de calcul</h2>
+            <ul class="plain-list">
+                <li>Transport = facteur transport x distance x nombre de trajets hebdomadaires</li>
+                <li>Repas = somme des repas x facteur de chaque type de repas</li>
+                <li>Numérique = streaming + visioconférence + emails</li>
+                <li>Total hebdomadaire = transport + repas + numérique</li>
+            </ul>
+        </section>
+
+        <section class="panel content-panel">
+            <h2>Liens officiels</h2>
+            <ul class="link-list">
+                <li><a href="https://www.data.gouv.fr/dataservices/api-impact-co2/">API Impact CO2</a></li>
+                <li><a href="https://impactco2.fr/doc/api">Documentation Impact CO2</a></li>
+                <li><a href="https://impactco2.fr/outils/transport">Outil transport</a></li>
+                <li><a href="https://impactco2.fr/outils/alimentation">Outil alimentation</a></li>
+                <li><a href="https://impactco2.fr/outils/usagenumerique">Outil usage numérique</a></li>
+                <li><a href="https://www.data.gouv.fr/dataservices/api-impacts-environnementaux-agribalyse-r">API AGRIBALYSE</a></li>
+                <li><a href="https://www.data.gouv.fr/dataservices/api-base-carbone">API Base Carbone</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Application pédagogique fondée sur des données publiques ADEME</p>
+    </footer>
+</body>
+</html>

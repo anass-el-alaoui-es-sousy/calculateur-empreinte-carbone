@@ -1,0 +1,5 @@
+.tmp-edge-profile/
+.git/
+Thumbs.db
+Desktop.ini
+.DS_Store

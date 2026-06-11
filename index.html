@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi 4 - Empreinte carbone étudiante</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-block">
+            <p class="eyebrow">Projet Informatique-SHS</p>
+            <h1>Estimer l'empreinte carbone d'une semaine étudiante</h1>
+            <p class="lead">
+                Cette application permet à un étudiant d'estimer son impact carbone sur une
+                semaine universitaire, à partir de trois postes simples : les trajets, les repas
+                et les usages numériques.
+            </p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="pages/calculateur.html">Commencer le calcul</a>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a class="nav-link nav-link-active" href="index.html">Accueil</a>
+            <a class="nav-link" href="pages/calculateur.html">Calculateur</a>
+            <a class="nav-link" href="pages/resultats.html">Résultats</a>
+            <a class="nav-link" href="pages/methodologie.html">Méthodologie</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="intro-grid">
+            <article class="info-card">
+                <h2>Le principe</h2>
+                <p>
+                    L'étudiant renseigne ses habitudes de la semaine. L'application associe ensuite
+                    ces informations à des facteurs d'émission pour obtenir une estimation globale.
+                </p>
+            </article>
+            <article class="info-card">
+                <h2>Les postes retenus</h2>
+                <ul class="plain-list">
+                    <li>Trajets domicile - université</li>
+                    <li>Repas pris pendant la semaine</li>
+                    <li>Usages numériques liés aux études</li>
+                </ul>
+            </article>
+            <article class="info-card">
+                <h2>Le résultat</h2>
+                <p>
+                    La page résultats affiche le total de la semaine, le détail par catégorie et
+                    une lecture rapide du poste le plus important.
+                </p>
+            </article>
+        </section>
+
+        <section class="topic-section">
+            <div class="topic-heading">
+                <p class="eyebrow">Choix du projet</p>
+                <h2>Pourquoi ces données ?</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Transport</h3>
+                    <p>
+                        Le mode de transport, la distance et le nombre de jours de présence permettent
+                        d'estimer les émissions liées aux trajets domicile - université.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3>Repas</h3>
+                    <p>
+                        Les repas sont regroupés en grandes catégories pour garder un formulaire
+                        rapide à remplir et une estimation facile à comprendre.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <h3>Numérique</h3>
+                    <p>
+                        Le streaming, la visioconférence et les emails représentent des usages
+                        numériques fréquents dans le cadre universitaire.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="callout-panel">
+            <div>
+                <p class="eyebrow">Parcours utilisateur</p>
+                <h2>Comment ça fonctionne ?</h2>
+            </div>
+            <ul class="plain-list">
+                <li>1. L'étudiant découvre le projet sur la page d'accueil.</li>
+                <li>2. Il renseigne ses habitudes sur la page calculateur.</li>
+                <li>3. Il consulte son total et le détail par catégorie.</li>
+                <li>4. Il peut vérifier les sources sur la page méthodologie.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Défi 4 - Projet Informatique-SHS - MIASHS</p>
+    </footer>
+</body>
+</html>

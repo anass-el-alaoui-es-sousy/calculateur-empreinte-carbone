@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur carbone - Défi 4</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header site-header-compact">
+        <div class="logo-block">
+            <p class="eyebrow">Défi 4.3</p>
+            <h1>Calculateur carbone hebdomadaire</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a class="nav-link" href="../index.html">Accueil</a>
+            <a class="nav-link nav-link-active" href="calculateur.html">Calculateur</a>
+            <a class="nav-link" href="resultats.html">Résultats</a>
+            <a class="nav-link" href="methodologie.html">Méthodologie</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <div class="calculator-grid">
+            <section class="panel form-panel">
+                <h2>1. Renseigner les usages</h2>
+                <p class="section-lead">
+                    Remplis les informations principales de ta semaine. Une fois le formulaire
+                    validé, l'application calcule l'estimation et affiche la page résultats.
+                </p>
+                <form id="carbon-form">
+                    <fieldset class="fieldset-block">
+                        <legend>Transport</legend>
+                        <label for="transport-mode">Mode de transport principal</label>
+                        <select id="transport-mode" name="transport-mode">
+                            <option value="walk">À pied</option>
+                            <option value="bike">Vélo</option>
+                            <option value="metro">Métro</option>
+                            <option value="bus">Bus thermique</option>
+                            <option value="tgv">TGV / train</option>
+                            <option value="electric-car">Voiture électrique</option>
+                            <option value="thermal-car">Voiture thermique</option>
+                            <option value="carpool">Covoiturage</option>
+                        </select>
+
+                        <label for="distance-km">Distance aller simple domicile - université (km)</label>
+                        <input id="distance-km" name="distance-km" type="number" min="0" step="0.1" value="8">
+
+                        <label for="days-per-week">Nombre de jours sur campus par semaine</label>
+                        <input id="days-per-week" name="days-per-week" type="number" min="0" max="7" step="1" value="5">
+
+                        <label class="checkbox-row" for="round-trip">
+                            <input id="round-trip" name="round-trip" type="checkbox" checked>
+                            <span>Compter l'aller-retour</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset-block">
+                        <legend>Repas</legend>
+                        <div class="field-grid">
+                            <div>
+                                <label for="meal-vegan">Repas végétaliens</label>
+                                <input id="meal-vegan" type="number" min="0" step="1" value="2">
+                            </div>
+                            <div>
+                                <label for="meal-vegetarian">Repas végétariens</label>
+                                <input id="meal-vegetarian" type="number" min="0" step="1" value="3">
+                            </div>
+                            <div>
+                                <label for="meal-chicken">Repas avec poulet</label>
+                                <input id="meal-chicken" type="number" min="0" step="1" value="2">
+                            </div>
+                            <div>
+                                <label for="meal-fish">Repas avec poisson</label>
+                                <input id="meal-fish" type="number" min="0" step="1" value="1">
+                            </div>
+                            <div>
+                                <label for="meal-beef">Repas avec boeuf</label>
+                                <input id="meal-beef" type="number" min="0" step="1" value="1">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-block">
+                        <legend>Usages numériques</legend>
+                        <div class="field-grid">
+                            <div>
+                                <label for="streaming-hours">Heures de streaming par semaine</label>
+                                <input id="streaming-hours" type="number" min="0" step="0.5" value="4">
+                            </div>
+                            <div>
+                                <label for="visio-hours">Heures de visioconférence par semaine</label>
+                                <input id="visio-hours" type="number" min="0" step="0.5" value="3">
+                            </div>
+                            <div>
+                                <label for="emails-sent">Emails envoyés par semaine</label>
+                                <input id="emails-sent" type="number" min="0" step="1" value="35">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button class="button button-primary" type="submit">Calculer et voir les résultats</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel prep-panel">
+                <h2>2. Ce qui sera calculé</h2>
+                <div class="prep-steps">
+                    <article class="prep-card">
+                        <h3>Transport</h3>
+                        <p>
+                            Le calcul utilise le mode de transport, la distance et le nombre de
+                            trajets réalisés pendant la semaine.
+                        </p>
+                    </article>
+                    <article class="prep-card">
+                        <h3>Repas</h3>
+                        <p>
+                            Chaque type de repas est associé à un facteur d'émission, puis les valeurs
+                            sont additionnées sur la semaine.
+                        </p>
+                    </article>
+                    <article class="prep-card">
+                        <h3>Numérique</h3>
+                        <p>
+                            L'application estime l'impact du streaming, de la visioconférence et des
+                            emails à partir de facteurs simplifiés.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="note-box">
+                    <h3>Page suivante</h3>
+                    <p>
+                        La page résultats affichera le total carbone hebdomadaire, le détail par
+                        catégorie et un graphique de répartition.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Page de saisie du projet Défi 4</p>
+    </footer>
+</body>
+</html>
