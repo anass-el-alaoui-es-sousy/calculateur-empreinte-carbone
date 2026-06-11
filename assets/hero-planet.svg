@@ -1,0 +1,30 @@
+<svg width="720" height="560" viewBox="0 0 720 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Globe vert et bleu avec feuilles</title>
+  <desc id="desc">Illustration vectorielle originale d'une planete accompagnee de feuilles.</desc>
+  <circle cx="398" cy="246" r="214" fill="#EAF7DE"/>
+  <circle cx="424" cy="250" r="164" fill="url(#ocean)"/>
+  <path d="M333 145c36-31 89-48 139-38 39 8 71 27 96 55-47-3-82 7-105 29-25 25-69 28-130-46Z" fill="#7BCB5C" opacity=".95"/>
+  <path d="M287 263c32-36 74-51 128-45 41 5 71 22 104 58-53-8-93 5-121 38-24 29-64 24-111-51Z" fill="#5BBE62" opacity=".92"/>
+  <path d="M384 397c24-50 63-77 117-80 41-2 77 10 109 36-28 39-73 63-122 63-38 0-72-7-104-19Z" fill="#147D74" opacity=".82"/>
+  <path d="M497 112c-40 38-61 84-61 138 0 55 21 103 61 145" stroke="#D9F6E1" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+  <path d="M355 123c59 54 127 78 204 72" stroke="#D9F6E1" stroke-width="9" stroke-linecap="round" opacity=".65"/>
+  <path d="M295 284c75 29 160 28 254-2" stroke="#D9F6E1" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <circle cx="424" cy="250" r="164" stroke="#C4F0CB" stroke-width="10"/>
+  <path d="M172 295c76 29 118 78 127 148-65-22-109-68-127-148Z" fill="#118568"/>
+  <path d="M184 303c38 47 76 86 115 140" stroke="#D6F5D9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M160 366c46-9 87 4 124 39-48 16-90 3-124-39Z" fill="#70C84F"/>
+  <path d="M590 316c48-33 88-41 121-26-32 35-72 44-121 26Z" fill="#118568"/>
+  <path d="M600 313c34-8 68-15 100-23" stroke="#D6F5D9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M632 374c21-40 51-62 90-64-16 46-46 67-90 64Z" fill="#61BD58"/>
+  <path d="M92 192c36-23 69-28 98-15-22 33-55 38-98 15Z" fill="#118568"/>
+  <path d="M102 191c29-3 55-7 79-13" stroke="#D6F5D9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M557 154h55c18 0 30 12 30 27h-117c0-15 14-27 32-27Z" fill="#FFFFFF" opacity=".9"/>
+  <path d="M99 431c133-38 273-39 419-3 56 14 108 18 156 12v68H99v-77Z" fill="#DDF4D8" opacity=".9"/>
+  <defs>
+    <linearGradient id="ocean" x1="284" y1="108" x2="589" y2="407" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9CD765"/>
+      <stop offset=".38" stop-color="#5BC0B8"/>
+      <stop offset="1" stop-color="#005A6F"/>
+    </linearGradient>
+  </defs>
+</svg>

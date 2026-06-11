@@ -48,7 +48,7 @@ function toNumber(value) {
 }
 
 function formatKg(value) {
-    return `${value.toFixed(2).replace(".", ",")} kg CO2e`;
+    return `${value.toFixed(2).replace(".", ",")} kg CO₂e`;
 }
 
 function getDefaultState() {
@@ -129,6 +129,17 @@ function saveState(state) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+function hasUsableResults(state) {
+    return Boolean(
+        state &&
+        state.results &&
+        Number.isFinite(Number(state.results.total)) &&
+        Number.isFinite(Number(state.results.transport)) &&
+        Number.isFinite(Number(state.results.meals)) &&
+        Number.isFinite(Number(state.results.digital))
+    );
+}
+
 function loadState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
@@ -170,9 +181,39 @@ function renderChart(state) {
         { label: "Repas", value: state.results.meals, className: "bar-meals" },
         { label: "Numérique", value: state.results.digital, className: "bar-digital" }
     ];
+    const total = Math.max(state.results.total, 0);
     const maxValue = Math.max(...items.map((item) => item.value), 1);
+    let cumulativeDegrees = 0;
+    const segments = items.map((item) => {
+        const degrees = total > 0 ? (item.value / total) * 360 : 0;
+        cumulativeDegrees += degrees;
+        return cumulativeDegrees;
+    });
 
     chart.innerHTML = "";
+    chart.className = "chart-dashboard";
+
+    const donut = document.createElement("div");
+    donut.className = "donut-chart";
+    donut.style.setProperty("--transport", `${segments[0]}deg`);
+    donut.style.setProperty("--meals", `${segments[1]}deg`);
+    donut.style.setProperty("--digital", `${segments[2]}deg`);
+
+    const donutCenter = document.createElement("div");
+    donutCenter.className = "donut-center";
+
+    const donutValue = document.createElement("strong");
+    donutValue.textContent = total > 0 ? total.toFixed(1).replace(".", ",") : "0";
+
+    const donutLabel = document.createElement("span");
+    donutLabel.textContent = "kg CO₂e";
+
+    donutCenter.append(donutValue, donutLabel);
+    donut.appendChild(donutCenter);
+
+    const bars = document.createElement("div");
+    bars.className = "bar-chart";
+
     items.forEach((item) => {
         const row = document.createElement("div");
         row.className = "bar-row";
@@ -194,8 +235,10 @@ function renderChart(state) {
 
         track.appendChild(fill);
         row.append(label, track, value);
-        chart.appendChild(row);
+        bars.appendChild(row);
     });
+
+    chart.append(donut, bars);
 }
 
 function fillRecapList(listId, entries) {
@@ -259,6 +302,58 @@ function renderResultsPage(state) {
     renderChart(state);
 }
 
+function renderHomeDashboard() {
+    const dashboard = document.getElementById("home-dashboard");
+    if (!dashboard) {
+        return;
+    }
+
+    const title = document.getElementById("home-dashboard-title");
+    const totalValue = document.getElementById("home-dashboard-total");
+    const status = document.getElementById("home-dashboard-status");
+    const donut = document.getElementById("home-dashboard-donut");
+    const donutLabel = document.getElementById("home-dashboard-donut-label");
+    const transportValue = document.getElementById("home-transport-value");
+    const mealsValue = document.getElementById("home-meals-value");
+    const digitalValue = document.getElementById("home-digital-value");
+    const state = loadState();
+
+    if (!hasUsableResults(state)) {
+        title.textContent = "Aucun calcul enregistré";
+        totalValue.innerHTML = "— <span>kg CO₂e</span>";
+        status.textContent = "Lance un calcul pour afficher ton empreinte hebdomadaire.";
+        transportValue.textContent = "— kg CO₂e";
+        mealsValue.textContent = "— kg CO₂e";
+        digitalValue.textContent = "— kg CO₂e";
+        donut.classList.add("preview-donut-empty");
+        donut.style.removeProperty("--transport");
+        donut.style.removeProperty("--meals");
+        donut.style.removeProperty("--digital");
+        donutLabel.textContent = "CO₂";
+        return;
+    }
+
+    const { transport, meals, digital, total } = state.results;
+    let cumulativeDegrees = 0;
+    const segments = [transport, meals, digital].map((value) => {
+        const degrees = total > 0 ? (value / total) * 360 : 0;
+        cumulativeDegrees += degrees;
+        return cumulativeDegrees;
+    });
+
+    title.textContent = "Votre empreinte hebdomadaire";
+    totalValue.innerHTML = `${total.toFixed(2).replace(".", ",")} <span>kg CO₂e</span>`;
+    status.textContent = "Dernier calcul enregistré";
+    transportValue.textContent = formatKg(transport);
+    mealsValue.textContent = formatKg(meals);
+    digitalValue.textContent = formatKg(digital);
+    donut.classList.remove("preview-donut-empty");
+    donut.style.setProperty("--transport", `${segments[0]}deg`);
+    donut.style.setProperty("--meals", `${segments[1]}deg`);
+    donut.style.setProperty("--digital", `${segments[2]}deg`);
+    donutLabel.textContent = "CO₂";
+}
+
 function initCalculatorPage() {
     const form = document.getElementById("carbon-form");
     if (!form) {
@@ -292,6 +387,7 @@ function initResultsPage() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    renderHomeDashboard();
     initCalculatorPage();
     initResultsPage();
 });

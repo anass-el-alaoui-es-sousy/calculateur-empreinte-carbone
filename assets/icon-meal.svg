@@ -1,0 +1,12 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Icone repas</title>
+  <rect width="96" height="96" rx="24" fill="#ECF8E8"/>
+  <path d="M24 49h48c-2 16-12 26-24 26S26 65 24 49Z" fill="#FFFFFF" stroke="#B9E0B3" stroke-width="4"/>
+  <circle cx="35" cy="45" r="10" fill="#F97316"/>
+  <circle cx="48" cy="39" r="11" fill="#6FCF53"/>
+  <circle cx="61" cy="45" r="10" fill="#EF4444"/>
+  <path d="M35 35c-2-8 2-13 8-15" stroke="#118568" stroke-width="4" stroke-linecap="round"/>
+  <path d="M58 35c2-8 8-11 15-9" stroke="#118568" stroke-width="4" stroke-linecap="round"/>
+  <path d="M77 24v46" stroke="#062A44" stroke-width="5" stroke-linecap="round"/>
+  <path d="M70 24v18M77 24v18M84 24v18" stroke="#062A44" stroke-width="4" stroke-linecap="round"/>
+</svg>

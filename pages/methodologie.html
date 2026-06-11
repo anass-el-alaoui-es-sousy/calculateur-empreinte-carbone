@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Méthodologie - Défi 4</title>
+    <title>Méthodologie du calculateur carbone</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <header class="site-header site-header-compact">
-        <div class="logo-block">
-            <p class="eyebrow">Défi 4.3</p>
-            <h1>Méthodologie et sources</h1>
-        </div>
-        <nav class="main-nav" aria-label="Navigation principale">
-            <a class="nav-link" href="../index.html">Accueil</a>
-            <a class="nav-link" href="calculateur.html">Calculateur</a>
-            <a class="nav-link" href="resultats.html">Résultats</a>
-            <a class="nav-link nav-link-active" href="methodologie.html">Méthodologie</a>
+        <nav class="top-nav" aria-label="Navigation principale">
+            <a class="brand" href="../index.html" aria-label="Accueil">
+                <span class="brand-leaf" aria-hidden="true"></span>
+                <span>EAES Carbon</span>
+            </a>
+            <div class="main-nav">
+                <a class="nav-link" href="../index.html">Accueil</a>
+                <a class="nav-link" href="calculateur.html">Calculateur</a>
+                <a class="nav-link" href="resultats.html">Résultats</a>
+                <a class="nav-link nav-link-active" href="methodologie.html">Méthodologie</a>
+            </div>
         </nav>
+        <div class="page-title">
+            <p class="project-badge small-badge">Transparence</p>
+            <h1>Méthodologie et facteurs d’émission</h1>
+            <p class="lead">Les calculs reposent sur des facteurs publics simplifiés pour une lecture hebdomadaire.</p>
+        </div>
     </header>
 
-    <main class="page-shell">
+    <main class="page-shell methodology-layout">
         <section class="panel content-panel">
-            <h2>Données retenues</h2>
+            <div class="section-heading compact-heading">
+                <p class="eyebrow">Périmètre</p>
+                <h2>Données retenues</h2>
+            </div>
             <p>
-                L'application retient trois familles de données : le transport domicile - université,
+                L’application retient trois familles de données : le transport domicile-université,
                 les repas pris sur une semaine et les usages numériques liés aux études.
+            </p>
+            <p>
+                Ce projet est un projet universitaire personnel. Il n’est affilié à aucun service
+                officiel de calcul carbone.
             </p>
             <div class="table-wrap">
                 <table>
@@ -58,79 +72,102 @@
         </section>
 
         <section class="panel content-panel">
-            <h2>Choix de conception</h2>
+            <div class="section-heading compact-heading">
+                <p class="eyebrow">Conception</p>
+                <h2>Choix techniques</h2>
+            </div>
             <p>
-                L'application est réalisée individuellement en HTML, CSS et JavaScript, afin de
-                rester cohérente avec les apprentissages du cours et avec les défis précédents.
+                L’application est réalisée en HTML, CSS et JavaScript natif. Les résultats sont
+                stockés avec localStorage pour conserver une expérience simple, compatible avec
+                GitHub Pages et sans dépendance externe.
             </p>
         </section>
 
         <section class="panel content-panel">
-            <h2>Facteurs utilises dans l'application</h2>
+            <div class="section-heading compact-heading">
+                <p class="eyebrow">Facteurs</p>
+                <h2>Valeurs utilisées dans l’application</h2>
+            </div>
             <div class="factor-grid">
                 <article class="factor-card">
+                    <img class="card-img" src="../assets/icon-transport.svg" alt="" aria-hidden="true">
                     <h3>Transport</h3>
                     <ul class="plain-list">
-                        <li>Métro : 4,44 g CO2e / km</li>
-                        <li>Bus thermique : 122 g CO2e / km</li>
-                        <li>TGV : 2,93 g CO2e / km</li>
-                        <li>Voiture électrique : 103 g CO2e / km</li>
-                        <li>Voiture thermique : 218 g CO2e / km</li>
-                        <li>Covoiturage : 109 g CO2e / km</li>
+                        <li>Métro : 4,44 g CO₂e / km</li>
+                        <li>Bus thermique : 122 g CO₂e / km</li>
+                        <li>TGV : 2,93 g CO₂e / km</li>
+                        <li>Voiture électrique : 103 g CO₂e / km</li>
+                        <li>Voiture thermique : 218 g CO₂e / km</li>
+                        <li>Covoiturage : 109 g CO₂e / km</li>
                     </ul>
                 </article>
                 <article class="factor-card">
+                    <img class="card-img" src="../assets/icon-meal.svg" alt="" aria-hidden="true">
                     <h3>Repas</h3>
                     <ul class="plain-list">
-                        <li>Repas végétal / végétalien : 0,39 kg CO2e</li>
-                        <li>Repas végétarien : 0,51 kg CO2e</li>
-                        <li>Repas avec poulet : 1,58 kg CO2e</li>
-                        <li>Repas avec poisson : 1,98 kg CO2e</li>
-                        <li>Repas avec boeuf : 7,26 kg CO2e</li>
+                        <li>Repas végétal / végétalien : 0,39 kg CO₂e</li>
+                        <li>Repas végétarien : 0,51 kg CO₂e</li>
+                        <li>Repas avec poulet : 1,58 kg CO₂e</li>
+                        <li>Repas avec poisson : 1,98 kg CO₂e</li>
+                        <li>Repas avec boeuf : 7,26 kg CO₂e</li>
                     </ul>
                 </article>
                 <article class="factor-card">
+                    <img class="card-img" src="../assets/icon-digital.svg" alt="" aria-hidden="true">
                     <h3>Numérique</h3>
                     <ul class="plain-list">
-                        <li>Streaming : 31,6 g CO2e / heure</li>
-                        <li>Visioconférence : 16 g CO2e / heure</li>
-                        <li>Email : 0,104 g CO2e / email</li>
+                        <li>Streaming : 31,6 g CO₂e / heure</li>
+                        <li>Visioconférence : 16 g CO₂e / heure</li>
+                        <li>Email : 0,104 g CO₂e / email</li>
                     </ul>
                 </article>
             </div>
             <p class="muted-note">
                 Les facteurs numériques ont été simplifiés à partir des équivalences publiques
-                affichées sur l'outil Usage numérique d'Impact CO2 afin de disposer d'un calcul
-                hebdomadaire clair et directement exploitable dans une application web.
+                affichées sur l’outil Usage numérique d’Impact CO2 afin de disposer d’un calcul
+                clair et directement exploitable dans une application web.
             </p>
         </section>
 
-        <section class="panel content-panel">
-            <h2>Formules de calcul</h2>
-            <ul class="plain-list">
-                <li>Transport = facteur transport x distance x nombre de trajets hebdomadaires</li>
-                <li>Repas = somme des repas x facteur de chaque type de repas</li>
-                <li>Numérique = streaming + visioconférence + emails</li>
-                <li>Total hebdomadaire = transport + repas + numérique</li>
-            </ul>
+        <section class="two-column-section">
+            <article class="panel content-panel">
+                <h2>Formules de calcul</h2>
+                <ul class="plain-list formula-list">
+                    <li>Transport = facteur transport x distance x nombre de trajets hebdomadaires</li>
+                    <li>Repas = somme des repas x facteur de chaque type de repas</li>
+                    <li>Numérique = streaming + visioconférence + emails</li>
+                    <li>Total hebdomadaire = transport + repas + numérique</li>
+                </ul>
+            </article>
+
+            <article class="panel content-panel">
+                <h2>Liens officiels</h2>
+                <ul class="link-list">
+                    <li><a href="https://www.data.gouv.fr/dataservices/api-impact-co2/">API Impact CO2</a></li>
+                    <li><a href="https://impactco2.fr/doc/api">Documentation Impact CO2</a></li>
+                    <li><a href="https://impactco2.fr/outils/transport">Outil transport</a></li>
+                    <li><a href="https://impactco2.fr/outils/alimentation">Outil alimentation</a></li>
+                    <li><a href="https://impactco2.fr/outils/usagenumerique">Outil usage numérique</a></li>
+                    <li><a href="https://www.data.gouv.fr/dataservices/api-impacts-environnementaux-agribalyse-r">API AGRIBALYSE</a></li>
+                    <li><a href="https://www.data.gouv.fr/dataservices/api-base-carbone">API Base Carbone</a></li>
+                </ul>
+            </article>
         </section>
 
-        <section class="panel content-panel">
-            <h2>Liens officiels</h2>
-            <ul class="link-list">
-                <li><a href="https://www.data.gouv.fr/dataservices/api-impact-co2/">API Impact CO2</a></li>
-                <li><a href="https://impactco2.fr/doc/api">Documentation Impact CO2</a></li>
-                <li><a href="https://impactco2.fr/outils/transport">Outil transport</a></li>
-                <li><a href="https://impactco2.fr/outils/alimentation">Outil alimentation</a></li>
-                <li><a href="https://impactco2.fr/outils/usagenumerique">Outil usage numérique</a></li>
-                <li><a href="https://www.data.gouv.fr/dataservices/api-impacts-environnementaux-agribalyse-r">API AGRIBALYSE</a></li>
-                <li><a href="https://www.data.gouv.fr/dataservices/api-base-carbone">API Base Carbone</a></li>
-            </ul>
+        <section class="panel content-panel credits-panel">
+            <div>
+                <p class="eyebrow">Credits</p>
+                <h2>Illustrations</h2>
+            </div>
+            <p>
+                Les illustrations SVG et icônes présentes dans ce projet ont été créées localement
+                pour cette interface. Aucune attribution externe n’est nécessaire.
+            </p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>Application pédagogique fondée sur des données publiques ADEME</p>
+        <p>Application pédagogique fondée sur des données publiques.</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration globe et tableau de bord carbone</title>
+  <desc id="desc">Un globe vert et bleu accompagne des cartes de donnees CO2e.</desc>
+  <rect width="720" height="520" rx="36" fill="url(#bg)"/>
+  <circle cx="358" cy="250" r="144" fill="#DFF8EA"/>
+  <circle cx="358" cy="250" r="118" fill="url(#globe)"/>
+  <path d="M257 228c31-41 69-58 112-53 39 4 66 27 93 57-24-9-49-12-75-7-43 8-73 32-130 3Z" fill="#31C48D" opacity=".92"/>
+  <path d="M301 332c19-49 57-76 111-79 26-1 52 6 76 20-16 56-67 96-128 96-22 0-42-5-59-15Z" fill="#22A66F" opacity=".9"/>
+  <path d="M243 256c36 14 73 18 111 11 34-6 64-20 91-42" stroke="#E8FFF1" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+  <path d="M245 281c49 17 104 17 165-1 34-10 61-25 82-44" stroke="#E8FFF1" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  <path d="M358 132c-22 36-34 75-34 118 0 43 12 82 34 118" stroke="#E8FFF1" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  <path d="M358 132c22 36 34 75 34 118 0 43-12 82-34 118" stroke="#E8FFF1" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+  <circle cx="358" cy="250" r="118" stroke="#B8F3D0" stroke-width="8"/>
+  <rect x="70" y="86" width="184" height="106" rx="24" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="96" y="114" width="68" height="12" rx="6" fill="#22A66F"/>
+  <rect x="96" y="142" width="118" height="10" rx="5" fill="#D7E4EA"/>
+  <rect x="96" y="163" width="88" height="10" rx="5" fill="#D7E4EA"/>
+  <circle cx="207" cy="128" r="22" fill="#E8FFF1"/>
+  <path d="M198 128h18M207 119v18" stroke="#087A6C" stroke-width="4" stroke-linecap="round"/>
+  <rect x="468" y="72" width="178" height="122" rx="24" fill="#FFFFFF" filter="url(#shadow)"/>
+  <path d="M505 150c12-31 27-46 45-46s33 14 45 46" stroke="#22A66F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M505 150h90" stroke="#D7E4EA" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="550" cy="150" r="9" fill="#087A6C"/>
+  <rect x="512" y="102" width="76" height="10" rx="5" fill="#D7E4EA"/>
+  <rect x="94" y="342" width="188" height="96" rx="24" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="124" y="378" width="28" height="36" rx="10" fill="#0EA5E9"/>
+  <rect x="166" y="360" width="28" height="54" rx="10" fill="#22A66F"/>
+  <rect x="208" y="389" width="28" height="25" rx="10" fill="#7DD3FC"/>
+  <rect x="478" y="334" width="164" height="110" rx="24" fill="#FFFFFF" filter="url(#shadow)"/>
+  <path d="M528 388c24-36 57-48 91-30-25 4-44 18-57 42-12 22-30 29-54 20 1-12 7-23 20-32Z" fill="#22A66F"/>
+  <path d="M520 416c24-28 51-47 91-59" stroke="#E8FFF1" stroke-width="5" stroke-linecap="round"/>
+  <text x="348" y="262" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="36" fill="#FFFFFF">CO2e</text>
+  <text x="348" y="294" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#E8FFF1">dashboard</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="720" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4FFFB"/>
+      <stop offset=".55" stop-color="#EAF7FF"/>
+      <stop offset="1" stop-color="#DFF8EA"/>
+    </linearGradient>
+    <linearGradient id="globe" x1="260" y1="144" x2="455" y2="363" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset=".48" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#087A6C"/>
+    </linearGradient>
+    <filter id="shadow" x="50" y="52" width="620" height="414" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0F766E" flood-opacity=".16"/>
+    </filter>
+  </defs>
+</svg>

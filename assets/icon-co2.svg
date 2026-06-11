@@ -1,0 +1,8 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Icone CO2</title>
+  <rect width="96" height="96" rx="24" fill="#EAF7DE"/>
+  <path d="M30 61h38c9 0 16-7 16-16s-7-16-16-16c-4-10-13-16-24-14-10 2-17 10-19 20-8 1-14 7-14 15 0 6 6 11 19 11Z" fill="#FFFFFF" stroke="#9CCFA1" stroke-width="4"/>
+  <text x="48" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#118568">CO2</text>
+  <path d="M66 20c14-3 22 1 25 12-13 4-21 0-25-12Z" fill="#45B55E"/>
+  <path d="M66 20c7 6 14 10 24 12" stroke="#DDF4D8" stroke-width="3" stroke-linecap="round"/>
+</svg>

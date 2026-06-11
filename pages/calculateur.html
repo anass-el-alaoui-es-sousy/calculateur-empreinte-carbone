@@ -3,52 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur carbone - Défi 4</title>
+    <title>Calculateur carbone hebdomadaire</title>
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../js/script.js" defer></script>
 </head>
 <body>
     <header class="site-header site-header-compact">
-        <div class="logo-block">
-            <p class="eyebrow">Défi 4.3</p>
-            <h1>Calculateur carbone hebdomadaire</h1>
-        </div>
-        <nav class="main-nav" aria-label="Navigation principale">
-            <a class="nav-link" href="../index.html">Accueil</a>
-            <a class="nav-link nav-link-active" href="calculateur.html">Calculateur</a>
-            <a class="nav-link" href="resultats.html">Résultats</a>
-            <a class="nav-link" href="methodologie.html">Méthodologie</a>
+        <nav class="top-nav" aria-label="Navigation principale">
+            <a class="brand" href="../index.html" aria-label="Accueil">
+                <span class="brand-leaf" aria-hidden="true"></span>
+                <span>EAES Carbon</span>
+            </a>
+            <div class="main-nav">
+                <a class="nav-link" href="../index.html">Accueil</a>
+                <a class="nav-link nav-link-active" href="calculateur.html">Calculateur</a>
+                <a class="nav-link" href="resultats.html">Résultats</a>
+                <a class="nav-link" href="methodologie.html">Méthodologie</a>
+            </div>
         </nav>
+        <div class="page-title">
+            <p class="project-badge small-badge">Saisie des données</p>
+            <h1>Construis ton profil carbone de la semaine.</h1>
+            <p class="lead">Les données restent dans ton navigateur grâce à localStorage.</p>
+        </div>
     </header>
 
     <main class="page-shell">
         <div class="calculator-grid">
             <section class="panel form-panel">
-                <h2>1. Renseigner les usages</h2>
-                <p class="section-lead">
-                    Remplis les informations principales de ta semaine. Une fois le formulaire
-                    validé, l'application calcule l'estimation et affiche la page résultats.
-                </p>
+                <div class="section-heading compact-heading">
+                    <p class="eyebrow">Formulaire</p>
+                    <h2>Renseigner les usages</h2>
+                </div>
+
                 <form id="carbon-form">
-                    <fieldset class="fieldset-block">
-                        <legend>Transport</legend>
-                        <label for="transport-mode">Mode de transport principal</label>
-                        <select id="transport-mode" name="transport-mode">
-                            <option value="walk">À pied</option>
-                            <option value="bike">Vélo</option>
-                            <option value="metro">Métro</option>
-                            <option value="bus">Bus thermique</option>
-                            <option value="tgv">TGV / train</option>
-                            <option value="electric-car">Voiture électrique</option>
-                            <option value="thermal-car">Voiture thermique</option>
-                            <option value="carpool">Covoiturage</option>
-                        </select>
+                    <fieldset class="fieldset-block category-transport">
+                        <legend><img class="legend-img" src="../assets/icon-transport.svg" alt="" aria-hidden="true">Transport</legend>
+                        <div class="field-grid">
+                            <div class="field-control field-control-wide">
+                                <label for="transport-mode">Mode de transport principal</label>
+                                <select id="transport-mode" name="transport-mode">
+                                    <option value="walk">A pied</option>
+                                    <option value="bike">Velo</option>
+                                    <option value="metro">Metro</option>
+                                    <option value="bus">Bus thermique</option>
+                                    <option value="tgv">TGV / train</option>
+                                    <option value="electric-car">Voiture electrique</option>
+                                    <option value="thermal-car">Voiture thermique</option>
+                                    <option value="carpool">Covoiturage</option>
+                                </select>
+                            </div>
 
-                        <label for="distance-km">Distance aller simple domicile - université (km)</label>
-                        <input id="distance-km" name="distance-km" type="number" min="0" step="0.1" value="8">
+                            <div class="field-control">
+                                <label for="distance-km">Distance aller simple (km)</label>
+                                <input id="distance-km" name="distance-km" type="number" min="0" step="0.1" value="8">
+                            </div>
 
-                        <label for="days-per-week">Nombre de jours sur campus par semaine</label>
-                        <input id="days-per-week" name="days-per-week" type="number" min="0" max="7" step="1" value="5">
+                            <div class="field-control">
+                                <label for="days-per-week">Jours sur site</label>
+                                <input id="days-per-week" name="days-per-week" type="number" min="0" max="7" step="1" value="5">
+                            </div>
+                        </div>
 
                         <label class="checkbox-row" for="round-trip">
                             <input id="round-trip" name="round-trip" type="checkbox" checked>
@@ -56,95 +71,86 @@
                         </label>
                     </fieldset>
 
-                    <fieldset class="fieldset-block">
-                        <legend>Repas</legend>
+                    <fieldset class="fieldset-block category-meals">
+                        <legend><img class="legend-img" src="../assets/icon-meal.svg" alt="" aria-hidden="true">Repas</legend>
                         <div class="field-grid">
-                            <div>
-                                <label for="meal-vegan">Repas végétaliens</label>
+                            <div class="field-control">
+                                <label for="meal-vegan">Repas vegetaliens</label>
                                 <input id="meal-vegan" type="number" min="0" step="1" value="2">
                             </div>
-                            <div>
-                                <label for="meal-vegetarian">Repas végétariens</label>
+                            <div class="field-control">
+                                <label for="meal-vegetarian">Repas vegetariens</label>
                                 <input id="meal-vegetarian" type="number" min="0" step="1" value="3">
                             </div>
-                            <div>
+                            <div class="field-control">
                                 <label for="meal-chicken">Repas avec poulet</label>
                                 <input id="meal-chicken" type="number" min="0" step="1" value="2">
                             </div>
-                            <div>
+                            <div class="field-control">
                                 <label for="meal-fish">Repas avec poisson</label>
                                 <input id="meal-fish" type="number" min="0" step="1" value="1">
                             </div>
-                            <div>
+                            <div class="field-control">
                                 <label for="meal-beef">Repas avec boeuf</label>
                                 <input id="meal-beef" type="number" min="0" step="1" value="1">
                             </div>
                         </div>
                     </fieldset>
 
-                    <fieldset class="fieldset-block">
-                        <legend>Usages numériques</legend>
+                    <fieldset class="fieldset-block category-digital">
+                        <legend><img class="legend-img" src="../assets/icon-digital.svg" alt="" aria-hidden="true">Usages numériques</legend>
                         <div class="field-grid">
-                            <div>
-                                <label for="streaming-hours">Heures de streaming par semaine</label>
+                            <div class="field-control">
+                                <label for="streaming-hours">Streaming par semaine</label>
                                 <input id="streaming-hours" type="number" min="0" step="0.5" value="4">
                             </div>
-                            <div>
-                                <label for="visio-hours">Heures de visioconférence par semaine</label>
+                            <div class="field-control">
+                                <label for="visio-hours">Visioconference par semaine</label>
                                 <input id="visio-hours" type="number" min="0" step="0.5" value="3">
                             </div>
-                            <div>
-                                <label for="emails-sent">Emails envoyés par semaine</label>
+                            <div class="field-control">
+                                <label for="emails-sent">Emails envoyes</label>
                                 <input id="emails-sent" type="number" min="0" step="1" value="35">
                             </div>
                         </div>
                     </fieldset>
 
-                    <div class="form-actions">
-                        <button class="button button-primary" type="submit">Calculer et voir les résultats</button>
+                    <div class="form-actions sticky-actions">
+                        <button class="button button-primary" type="submit">Calculer mon empreinte</button>
                     </div>
                 </form>
             </section>
 
-            <section class="panel prep-panel">
-                <h2>2. Ce qui sera calculé</h2>
+            <aside class="panel prep-panel" aria-label="Resume du calcul">
+                <p class="eyebrow">Ce qui sera analyse</p>
+                <h2>Trois postes pour comprendre l'essentiel.</h2>
                 <div class="prep-steps">
                     <article class="prep-card">
+                        <img class="card-img" src="../assets/icon-transport.svg" alt="" aria-hidden="true">
                         <h3>Transport</h3>
-                        <p>
-                            Le calcul utilise le mode de transport, la distance et le nombre de
-                            trajets réalisés pendant la semaine.
-                        </p>
+                        <p>Facteur carbone multiplie par la distance et le nombre de trajets.</p>
                     </article>
                     <article class="prep-card">
+                        <img class="card-img" src="../assets/icon-meal.svg" alt="" aria-hidden="true">
                         <h3>Repas</h3>
-                        <p>
-                            Chaque type de repas est associé à un facteur d'émission, puis les valeurs
-                            sont additionnées sur la semaine.
-                        </p>
+                        <p>Somme des repas par type, avec un facteur d’émission simplifié.</p>
                     </article>
                     <article class="prep-card">
-                        <h3>Numérique</h3>
-                        <p>
-                            L'application estime l'impact du streaming, de la visioconférence et des
-                            emails à partir de facteurs simplifiés.
-                        </p>
+                        <img class="card-img" src="../assets/icon-digital.svg" alt="" aria-hidden="true">
+                        <h3>Numerique</h3>
+                        <p>Streaming, visioconférence et emails convertis en kg CO₂e.</p>
                     </article>
                 </div>
-
                 <div class="note-box">
-                    <h3>Page suivante</h3>
-                    <p>
-                        La page résultats affichera le total carbone hebdomadaire, le détail par
-                        catégorie et un graphique de répartition.
-                    </p>
+                    <h3>Sortie attendue</h3>
+                    <p>Un tableau de bord avec total hebdomadaire, catégorie dominante et répartition visuelle.</p>
                 </div>
-            </section>
+            </aside>
         </div>
     </main>
 
     <footer class="site-footer">
-        <p>Page de saisie du projet Défi 4</p>
+        <p>Calculateur local, sans transmission de données.</p>
     </footer>
 </body>
 </html>
